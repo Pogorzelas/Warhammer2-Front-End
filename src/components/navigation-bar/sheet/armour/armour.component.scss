@@ -1,0 +1,32 @@
+#primary {
+
+  margin-left: 5px;
+  margin-top: 65px;
+  display: grid;
+  grid-template: 32px / 50% 50% ;
+
+    output{
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+  }
+}
+#advance {
+
+  margin-top: 50px;
+  margin-left: 5px;
+  display: grid;
+  grid-template: repeat(6, 32px)/ 145px 48px 225px 1fr;
+
+  output{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+
+  }
+
+}

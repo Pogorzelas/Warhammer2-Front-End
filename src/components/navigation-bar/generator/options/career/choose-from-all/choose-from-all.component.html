@@ -1,0 +1,6 @@
+<button (click) = "chooseCareer()" class = "btn btn-secondary" > choose</button>
+<form>
+  <ng-container  *ngFor = " let career of tableCareer; let i = index">
+    <label><input type = "radio" name = "career" (click) = "choose(i)">{{career}}</label>
+  </ng-container>
+</form>

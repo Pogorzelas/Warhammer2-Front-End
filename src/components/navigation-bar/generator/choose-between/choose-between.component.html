@@ -1,0 +1,51 @@
+<div>
+
+  <div id = "trapping">
+
+    <ng-container *ngFor = "let trapping of trappings; let i = index">
+
+      <p *ngIf = "trappingsDisplay[i] === true">Ekwipunek:</p>
+      <ng-container *ngFor = "let trap of trapping; let x = index">
+
+        <button (click) = "chooseTrapping(x, i)"  *ngIf = "trappingsDisplay[i] === true" class = "btn btn-dark">{{trap}}</button>
+        <output *ngIf = "trapping.length - 1 > x && trappingsDisplay[i] === true"> Lub </output>
+
+      </ng-container>
+      <br>
+
+    </ng-container>
+
+  </div>
+  <div id = "skill">
+
+    <ng-container *ngFor = "let skill of skills; let i = index">
+
+      <p *ngIf = "skillsDisplay[i] === true">Umiejętność:</p>
+      <ng-container *ngFor = "let ski of skill; let x = index">
+
+        <button (click) = "chooseSkill(x, i)"  *ngIf = "skillsDisplay[i] === true" class = "btn btn-dark">{{ski}}</button>
+        <output *ngIf = "skill.length - 1 > x && skillsDisplay[i] === true"> Lub </output>
+
+      </ng-container>
+      <br>
+
+    </ng-container>
+
+  </div>
+  <div id = "talent">
+
+    <ng-container *ngFor = "let talent of talents; let i = index">
+
+      <p *ngIf = "talentsDisplay[i] === true">Zdolność:</p>
+      <ng-container *ngFor = "let tal of talent; let x = index">
+
+        <button (click) = "chooseTalent(x, i)"  *ngIf = "talentsDisplay[i] === true" class = "btn btn-dark">{{tal}}</button>
+        <output *ngIf = "talent.length - 1 > x && talentsDisplay[i] === true"> Lub </output>
+
+      </ng-container>
+
+    </ng-container>
+
+  </div>
+
+</div>

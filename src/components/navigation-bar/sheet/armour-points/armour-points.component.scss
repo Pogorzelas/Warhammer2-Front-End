@@ -1,0 +1,22 @@
+div{
+
+  margin-left: 32px;
+  margin-top: 83px;
+  display: grid;
+  grid-template: repeat(3, 31px)  / repeat(2, 47px);
+  grid-gap: 195px 307px;
+
+  output{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .lowerPoints {
+
+    margin-top: 32px;
+
+  }
+}

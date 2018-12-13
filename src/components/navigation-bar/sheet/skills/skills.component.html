@@ -1,0 +1,29 @@
+<div id="page">
+
+  <div id="baseSkills">
+
+    <ng-container *ngFor="let skill of basicSkills">
+
+      <output>{{skill.taken}}</output>
+      <output>{{skill.isTen}}</output>
+      <output id = "marginTwelve">{{skill.isTwelve}}</output>
+      <output>{{skill.relatedTalents}}</output>
+
+    </ng-container>
+
+  </div>
+  <div id="advancedSkills">
+
+    <ng-container *ngFor="let skill of advancedSkills">
+
+      <output>{{skill.name}}</output>
+      <output class="margin">{{skill.isTaken}}</output>
+      <output class="margin1">{{skill.isTen}}</output>
+      <output class="margin2">{{skill.isTwelve}}</output>
+      <output>{{skill.relatedTalents}}</output>
+
+    </ng-container>
+
+  </div>
+
+</div>

@@ -1,0 +1,12 @@
+<div>
+
+  <ng-container *ngFor = "let trap of trappings">
+
+    <output>{{trap.name}}</output>
+    <output *ngIf = "trap.enc !== 0">{{trap.enc}}</output>
+    <output *ngIf = "trap.enc === 0">-</output>
+    <output>{{trap.description}}</output>
+
+  </ng-container>
+
+</div>

@@ -1,0 +1,44 @@
+<div id="container">
+
+  <div>
+
+    <ng-container *ngFor = "let main of mainProfile ; let i = index">
+
+      <output (click) = "change(i)" [id] = "mercy[i]">{{main}}</output>
+
+    </ng-container>
+    <ng-container *ngFor = "let mainAdvance of advanceMainProfile">
+
+      <output *ngIf = "mainAdvance !== 0 && mainAdvance !== undefined">+{{mainAdvance}}</output>
+      <output *ngIf = "mainAdvance === 0">-</output>
+
+    </ng-container>
+    <ng-container *ngFor = "let main of mainProfile; let i = index">
+
+      <output *ngIf = "advanceMainProfile[i] !== undefined">{{main + advanceMainProfile[i]}}</output>
+
+    </ng-container>
+
+  </div>
+  <div>
+
+    <ng-container *ngFor = "let secondary of secondaryProfile">
+
+      <output>{{secondary}}</output>
+
+    </ng-container>
+    <ng-container *ngFor = "let secondaryAdvance of advanceSecondaryProfile">
+
+      <output *ngIf = "secondaryAdvance !== 0 && secondaryAdvance !== undefined">+{{secondaryAdvance}}</output>
+      <output *ngIf = "secondaryAdvance === 0">-</output>
+
+    </ng-container>
+    <ng-container *ngFor = "let secondary of secondaryProfile; let i = index">
+
+      <output *ngIf = "advanceSecondaryProfile[i] !== undefined">{{secondary + advanceSecondaryProfile[i]}}</output>
+
+    </ng-container>
+
+  </div>
+
+</div>

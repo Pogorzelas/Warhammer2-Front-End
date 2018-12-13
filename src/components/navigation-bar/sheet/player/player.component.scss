@@ -1,0 +1,65 @@
+#container{
+
+  margin-top: 170px;
+  display: grid;
+  grid-template: 32px 32px / 49% 1fr;
+
+  output{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  label {
+
+    display: flex;
+    flex-direction: row;
+
+  }
+
+  #playerName {
+
+    margin-top: 3px;
+    margin-left: 40px;
+    border: none;
+    width: 185px;
+
+  }
+
+  #gameMaster {
+
+    margin-top: 5px;
+    margin-left: 70px;
+    border: none;
+    width: 155px;
+
+  }
+
+  #campaign {
+
+    margin-top: 3px;
+    margin-left: 65px;
+    border: none;
+    width: 160px;
+  }
+
+  #campaignYear {
+
+    margin-top: 3px;
+    margin-left: 85px;
+    border: none;
+    width: 140px;
+
+  }
+
+  button { //upper button
+    margin-top: 3px;
+    font-size: 10px;
+    width: 28px;
+    height: 28px;
+
+  }
+
+}

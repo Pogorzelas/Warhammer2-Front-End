@@ -1,0 +1,38 @@
+div{
+
+  margin-top: 25px;
+  margin-left: 5px;
+  display: grid;
+  grid-template-rows: repeat(4 , 32px);
+
+  output{
+
+    display: flex;
+    align-items: center;
+
+  }
+
+  #name{
+
+    padding-left: 40px ;
+
+  }
+
+  #race{
+
+    padding-left: 40px ;
+
+  }
+
+  #currentCareer{
+
+    padding-left: 105px ;
+
+  }
+
+  #previousCareer{
+
+    padding-left: 125px ;
+
+  }
+}

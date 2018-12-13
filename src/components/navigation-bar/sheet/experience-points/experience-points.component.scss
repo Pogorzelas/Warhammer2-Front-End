@@ -1,0 +1,16 @@
+div{
+
+  margin-top: 35px;
+  margin-right: 15px;
+  display: grid;
+  grid-template: 32px / 145px 320px;
+
+  output{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+}

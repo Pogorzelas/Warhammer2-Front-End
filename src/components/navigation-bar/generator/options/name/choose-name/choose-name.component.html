@@ -1,0 +1,20 @@
+<div>
+
+  <button (click) = "chooseName()" class = "btn btn-secondary">Wybierz</button>
+  <p [hidden] = "hide">Wybierz imie</p>
+
+</div>
+<div class="row">
+
+  <form>
+
+      <ng-container  *ngFor = " let name of tableName; let i = index">
+
+        <label><input type = "radio" name = "name" (click) = "choose(i)" >{{name}}</label>
+
+      </ng-container>
+
+  </form>
+
+</div>
+

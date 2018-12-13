@@ -1,0 +1,38 @@
+#container{
+
+  margin-top: 65px;
+  margin-left: 85px;
+  display: grid;
+  grid-template: 96.6px 96.6px / 385.6px;
+  grid-gap: 32.1px;
+  font-size: 18px;
+  font-family: monospace;
+
+  #mercy {
+
+    background: greenyellow;
+    border: 0.5px solid #555;
+
+  }
+
+  #mercy:hover {
+
+    cursor: pointer;
+    background-color: lightcoral;
+
+  }
+
+  div{
+
+    display: grid;
+    grid-template: repeat(3, 32.1px)/repeat(8, 48.2px);
+
+    output{
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+  }
+}

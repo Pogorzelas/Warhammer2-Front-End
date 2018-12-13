@@ -1,0 +1,20 @@
+<form>
+
+  <div class="input-group mb-3">
+
+    <input type="text" class="form-control" placeholder="ustaw imię" [(ngModel)] = "name" name = "name">
+    <div class="input-group-append">
+
+      <button class="btn btn-outline-secondary" type="button" (click) = "sendName()">Ustaw</button>
+
+    </div>
+
+  </div>
+
+</form>
+<ng-container *ngIf = "hide">
+
+  <p>Ustaw jakieś imię</p>
+
+</ng-container>
+

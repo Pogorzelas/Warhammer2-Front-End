@@ -1,0 +1,12 @@
+<p>Warhammer Online Character Sheet</p>
+<form>
+
+  <div>
+
+      <input type="email" placeholder="email" name = "email" [(ngModel)]="regEmail" class="form-control">
+      <input type="password" placeholder="password" name = "password" [(ngModel)]="regPassword" class="form-control">
+      <button type="submit" value="registration" (click)="send()" routerLink="/log" class = "btn btn-secondary">registration</button>
+
+  </div>
+
+</form>

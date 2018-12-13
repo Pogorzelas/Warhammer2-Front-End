@@ -1,0 +1,27 @@
+<form>
+
+  <fieldset>
+
+
+    <legend>Career:</legend>
+    <div class = "row">
+
+      <label><input type="radio" name="career" value="roll" (focus)="chooseOption(1)">Losuj</label>
+      <label><input type="radio" name="career" value="choose" (focus)="chooseOption(2)">Wybierz</label>
+
+    </div>
+
+  </fieldset>
+
+</form>
+<ng-container *ngIf="option === 1">
+
+  <app-roll-career></app-roll-career>
+
+</ng-container>
+<ng-container *ngIf="option === 2">
+
+  <app-choose-from-all></app-choose-from-all>
+
+</ng-container>
+
