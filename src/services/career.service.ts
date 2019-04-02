@@ -41,8 +41,9 @@ export class CareerService {
   // EOG
   private end = new BehaviorSubject<string>('main');
   private finish = new BehaviorSubject<string>('start');
+
   constructor(private http: HttpClient) {}
-  // ADD CAREER
+
   addCareer (id: string): void {
     this.fetchCareerInfo(id).subscribe((careers: Career) => {
       this.careerName.next(careers.careerName);
@@ -51,10 +52,10 @@ export class CareerService {
       this.careerSecondaryProfile.next(careers.secondaryProfile);
       this.careerTalents.next(careers.talents);
       // *CHECK ARMOUR, MONEY & WEAPONS
-      careers.trappings.forEach( trapping => {
-        if (trapping.search('pancerz') !== -1 ) {
+      careers.trappings.forEach(trapping => {
+        if (trapping.search('pancerz') !== -1) {
           if (this.armourOption === 'primary') {
-            if (trapping.search('lekki pancerz') !== -1 ) {
+            if (trapping.search('lekki pancerz') !== -1) {
               // **CHECK LIGHT ARMOUR
               this.careerArmourType.next('lekki pancerz');
               this.careerArmourPoints.next(1);
@@ -78,7 +79,7 @@ export class CareerService {
         } else if (trapping === '1k10 zk') {
           this.careerMoney.next(StaticMethods.rollK10());
         } else if (trapping === '2k10 zk') {
-          this.careerMoney.next(StaticMethods.rollK10() + StaticMethods.rollK10() ) ;
+          this.careerMoney.next(StaticMethods.rollK10() + StaticMethods.rollK10());
         } else {
           // *CHECK WEAPONS
           this.fetchWeaponInfo(trapping).subscribe((weapon: Weapon) => {
@@ -94,7 +95,7 @@ export class CareerService {
     });
     this.end.next('');
   }
-  //
+
   talentsInfluences(influences: any[]): void {
     this.careerTalentsInfluences.next(influences);
   }
@@ -114,9 +115,11 @@ export class CareerService {
       }
     });
   }
+
   chosenSkill(skill: string): void {
     this.careerChosenSkills.next([skill]);
   }
+
   chosenTalent(talent: string): void {
     this.careerChosenTalents.next([talent]);
   }
@@ -156,6 +159,7 @@ export class CareerService {
     this.careerAllNamesTable.next(allCareers);
     this.careerNameTable.next(tableCareers);
   }
+
   setFinish(): void {
     this.finish.next('finish');
   }
@@ -163,68 +167,89 @@ export class CareerService {
   getCareerName(): Observable<string> {
     return this.careerName.asObservable();
   }
+
   getCareerNameTable(): Observable<string[]> {
     return this.careerNameTable.asObservable();
   }
+
   getCareerAllNamesTable(): Observable<string[]> {
     return this.careerAllNamesTable.asObservable();
   }
+
   getCareerIdTable(): Observable<string[]> {
     return this.careerIdTable.asObservable();
   }
+
   getCareerAllIdTable(): Observable<string[]> {
     return this.careerAllIdTable.asObservable();
   }
+
   // GET TRAPPINGS
   getArmourType(): Observable<string> {
     return this.careerArmourType.asObservable();
   }
+
   getArmourPoints(): Observable<number> {
     return this.careerArmourPoints.asObservable();
   }
+
   getArmour(): Observable<any> {
     return this.careerArmour.asObservable();
   }
+
   getMoney(): Observable<number> {
     return this.careerMoney.asObservable();
   }
+
   getWeapons(): Observable<Weapon> {
     return this.careerWeapons.asObservable();
   }
+
   getTrappings(): Observable<string> {
     return this.careerTrappings.asObservable();
   }
+
   // GET TALENTS & SKILLS & PROFILE
   getTalents(): Observable<string[]> {
     return this.careerTalents.asObservable();
   }
+
   getSkills(): Observable<string[]> {
     return this.careerSkills.asObservable();
   }
+
   getCareerMainProfile(): Observable<number[]> {
     return this.careerMainProfile.asObservable();
   }
+
   getCareerSecondaryProfile(): Observable<any[]> {
     return this.careerSecondaryProfile.asObservable();
   }
+
   getTalentsInfluences(): Observable<any[]> {
     return this.careerTalentsInfluences.asObservable();
   }
+
   getChosenWeapons(): Observable<Weapon> {
     return this.careerChosenWeapons.asObservable();
   }
+
   getChosenTrappings(): Observable<string[]> {
     return this.careerChosenTrappings.asObservable();
   }
+
   getChosenTalents(): Observable<string[]> {
     return this.careerChosenTalents.asObservable();
   }
+
   getChosenSkills(): Observable<string[]> {
     return this.careerChosenSkills.asObservable();
   }
+
   getEnd(): Observable<string> {
     return this.end.asObservable();
   }
+
   getFinish(): Observable<string> {
     return this.finish.asObservable();
   }
@@ -232,6 +257,7 @@ export class CareerService {
   setRace(race: string): void {
     this.race = race;
   }
+
   setArmourOptions(option: string): void {
     this.armourOption = option;
   }
@@ -239,16 +265,21 @@ export class CareerService {
   fetchId(roll: string) {
     return this.http.get(`${environment.apiUrl}/rolls/${roll}`);
   }
+
   fetchCareerInfo(id: string) {
     return this.http.get(`${environment.apiUrl}/careers/${id}`);
   }
+
   fetchWeaponInfo(weapon: string) {
     return this.http.get(`${environment.apiUrl}/weapons/${weapon}`);
   }
+
   fetchArmourInfo(armour: string) {
     return this.http.get(`${environment.apiUrl}/armours/${armour}`);
   }
+
   fetchTrappingInfo(trapping: string) {
     return this.http.get(`${environment.apiUrl}/trappings/${trapping}`);
   }
+
 }

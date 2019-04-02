@@ -7,12 +7,12 @@ import {CharacterService} from '../../../../services/character.service';
   styleUrls: ['./combat-movement.component.scss']
 })
 export class CombatMovementComponent implements OnInit {
+
   movement: number;
   chargeAttack: number;
   run: number;
 
-  constructor(private characterService: CharacterService) {
-  }
+  constructor(private characterService: CharacterService) {}
 
   ngOnInit() {
     this.characterService.getSpeed().subscribe(speed => {
@@ -21,4 +21,5 @@ export class CombatMovementComponent implements OnInit {
       this.run = speed * 6;
     });
   }
+
 }

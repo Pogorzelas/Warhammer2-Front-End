@@ -5,16 +5,12 @@
 
 </div>
 <div class="row">
-
   <form>
+    <ng-container  *ngFor = " let name of tableName; let i = index">
 
-      <ng-container  *ngFor = " let name of tableName; let i = index">
+      <label><input type = "radio" name = "name" (click) = "choose(i)" >{{name}}</label>
 
-        <label><input type = "radio" name = "name" (click) = "choose(i)" >{{name}}</label>
-
-      </ng-container>
-
+    </ng-container>
   </form>
-
 </div>
 

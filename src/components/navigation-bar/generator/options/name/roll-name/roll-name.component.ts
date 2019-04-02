@@ -7,12 +7,15 @@ import {CharacterService} from '../../../../../../services/character.service';
   styleUrls: ['./roll-name.component.scss']
 })
 export class RollNameComponent implements OnInit {
-  constructor(private characterService: CharacterService) { }
+
+  constructor(private characterService: CharacterService) {}
 
   ngOnInit() {
   }
+
   rollName() {
     this.characterService.rollName();
     this.characterService.confirmName();
   }
+
 }

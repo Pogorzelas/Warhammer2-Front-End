@@ -10,6 +10,7 @@ import {StaticMethods} from '../../../../constants/static-methods';
   styleUrls: ['./character-profile.component.scss']
 })
 export class CharacterProfileComponent implements OnInit {
+
   // PHASE #1
   race: string;
   mainProfile = new Array<number>(8);
@@ -21,8 +22,8 @@ export class CharacterProfileComponent implements OnInit {
   // PHASE #4
   advanceMainProfile = new Array<number>(8);
   advanceSecondaryProfile = new Array<any>(8);
-  constructor(private characterService: CharacterService, private careerService: CareerService) {
-  }
+
+  constructor(private characterService: CharacterService, private careerService: CareerService) {}
 
   ngOnInit() {
     // PHASE #1
@@ -110,5 +111,6 @@ export class CharacterProfileComponent implements OnInit {
     this.secondaryProfile[2] = Math.floor(sb / 10);
     this.secondaryProfile[3] = Math.floor(tb / 10);
   }
+
 }
 

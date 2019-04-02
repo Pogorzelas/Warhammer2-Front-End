@@ -1,77 +1,53 @@
 div {
-
   margin-top: 35px;
   margin-left: 5px;
   display: grid;
   grid-template: repeat(6, 32px) / 50% 50%;
 
   output {
-
     display: flex;
     align-items: center;
-
   }
 
-  #age{
-
+  #age {
     margin-left: 42px;
-
   }
 
-  #gender{
-
+  #gender {
     margin-left: 46px;
-
   }
 
-  #eyeColor{
-
+  #eyeColor {
     margin-left: 78px;
-
   }
 
-  #weight{
-
+  #weight {
     margin-left: 48px;
-
   }
 
-  #hairColor{
-
+  #hairColor {
     margin-left: 92px;
-
   }
 
-  #height{
-
+  #height {
     margin-left: 59px;
-
   }
 
-  #starSign{
-
+  #starSign {
     margin-left: 98px;
-
   }
 
-  #numberOfSiblings{
-
+  #numberOfSiblings {
     margin-left: 88px;
-
   }
 
-  #birthPlace{
-
+  #birthPlace {
     grid-column: span 2;
     margin-left: 115px;
-
   }
 
-  #distinguishingMarks{
-
+  #distinguishingMarks {
     grid-column: span 2;
     margin-left: 115px;
-
   }
-
 }

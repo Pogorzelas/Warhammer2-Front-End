@@ -8,6 +8,7 @@ import {CharacterService} from '../../../../services/character.service';
   styleUrls: ['./choose-between.component.scss']
 })
 export class ChooseBetweenComponent implements OnInit {
+
     trappings = [];
     trappingsDisplay = [];
     skills = [];
@@ -15,6 +16,7 @@ export class ChooseBetweenComponent implements OnInit {
     talents = [];
     talentsDisplay = [];
     end = '';
+
   constructor(private careerService: CareerService, private characterService: CharacterService) { }
 
   ngOnInit() {
@@ -51,6 +53,7 @@ export class ChooseBetweenComponent implements OnInit {
       this.trappingsDisplay.push(true);
     }
   }
+
   addSkills(skills: string[]): void {
     skills.forEach( skill => {
       if ( skill.search(' lub ') !== -1) {
@@ -59,6 +62,7 @@ export class ChooseBetweenComponent implements OnInit {
       }
     });
   }
+
   addTalents(talents: string[]): void {
     talents.forEach( talent => {
       if ( talent.search(' lub ') !== -1) {
@@ -73,16 +77,19 @@ export class ChooseBetweenComponent implements OnInit {
     this.trappingsDisplay[arr] = false;
     this.check();
   }
+
   chooseSkill(skill: number, arr: number): void {
     this.careerService.chosenSkill(this.skills[arr][skill]);
     this.skillsDisplay[arr] = false;
     this.check();
   }
+
   chooseTalent(talent: number, arr: number): void {
     this.careerService.chosenTalent(this.talents[arr][talent]);
     this.talentsDisplay[arr] = false;
     this.check();
   }
+
   check(): void { // do naprawy
     if (this.talentsDisplay[this.talentsDisplay.length - 1] === false &&
       this.trappingsDisplay[this.trappingsDisplay.length - 1] === false &&
@@ -91,4 +98,5 @@ export class ChooseBetweenComponent implements OnInit {
       this.careerService.setFinish();
     }
   }
+
 }

@@ -8,14 +8,19 @@ import {CharacterService} from '../../../../../../services/character.service';
   styleUrls: ['./roll-career.component.scss']
 })
 export class RollCareerComponent implements OnInit {
+
   race: string;
-  constructor(private careerService: CareerService, private characterService: CharacterService) { }
+
+  constructor(private careerService: CareerService, private characterService: CharacterService) {}
+
   ngOnInit() {
     this.characterService.getRace().subscribe( race => {
       this.race = race;
     });
   }
+
   rollCareer() {
     this.careerService.rollCareer();
   }
+
 }

@@ -1,5 +1,4 @@
 div {
-
   font-size: 11px;
   margin-top: 78px;
   margin-left: 27px;
@@ -8,12 +7,10 @@ div {
   grid-template: repeat(14, 33.5px)/ 108px 38.5px 178px;
 
   output {
-
     line-height: 1;
     display: flex;
     justify-content: center;
     align-items: flex-end;
     padding-bottom: 4px;
-
   }
 }

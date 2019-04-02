@@ -1,18 +1,16 @@
 <div id = "container">
-
   <nav class = "navbar navbar-dark">
 
-    <span class = "navbar-brand"><img src = "../../assets/icon.png" class = "d-inline-block mr-1 align-bottom"/>WG online character sheet</span>
+    <span class = "navbar-brand">
+      <img src = "../../assets/icon.png" class = "d-inline-block mr-1 align-bottom" alt="warhammer_icon"/>
+      WG online character sheet</span>
     <ul class = "navbar-nav mr-auto">
-
       <li class = "nav-item active" (click) = "chooseOption(1)">Generator</li>
       <li class = "nav-item active" (click) = "chooseOption(2)">Moje postacie</li>
-
     </ul>
 
   </nav>
   <ng-container *ngIf = "option === 1">
-
     <div id = "sheet">
 
       <app-sheet></app-sheet>
@@ -23,7 +21,6 @@
       <app-generator></app-generator>
 
     </div>
-
   </ng-container>
   <ng-container *ngIf = "option === 2">
 
@@ -32,5 +29,4 @@
 
   </ng-container>
   <div id = "footer"></div>
-
 </div>

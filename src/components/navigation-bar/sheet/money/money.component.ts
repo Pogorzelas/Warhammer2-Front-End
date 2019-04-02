@@ -7,8 +7,10 @@ import {CareerService} from '../../../../services/career.service';
   styleUrls: ['./money.component.scss']
 })
 export class MoneyComponent implements OnInit {
+
   goldCrowns = Math.floor(Math.random() * 19) + 2;
-  constructor(private careerService: CareerService) { }
+
+  constructor(private careerService: CareerService) {}
 
   ngOnInit() {
     this.careerService.getMoney().subscribe( money => {

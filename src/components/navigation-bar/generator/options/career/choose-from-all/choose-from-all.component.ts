@@ -8,11 +8,13 @@ import {CareerService} from '../../../../../../services/career.service';
   styleUrls: ['./choose-from-all.component.scss']
 })
 export class ChooseFromAllComponent implements OnInit {
+
   race: string;
   careerId: string;
   tableCareer = [];
   tableId = [];
-  constructor(private characterService: CharacterService, private careerService: CareerService) { }
+
+  constructor(private characterService: CharacterService, private careerService: CareerService) {}
 
   ngOnInit() {
     this.characterService.getRace().subscribe( rac => {
@@ -59,9 +61,11 @@ export class ChooseFromAllComponent implements OnInit {
       }
     });
   }
+
   chooseCareer(): void {
     this.careerService.addCareer(this.careerId);
   }
+
   choose(num: number) {
     this.careerId = this.tableId[num];
   }

@@ -10,6 +10,7 @@ import {skip} from 'rxjs/operators';
   styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent implements OnInit {
+
   basicSkills = [
     { name: 'charakteryzacja',        taken: '', isTen: '', isTwelve: '', relatedTalents: '' },
     { name: 'dowodzenie',             taken: '', isTen: '', isTwelve: '', relatedTalents: '' },
@@ -33,6 +34,7 @@ export class SkillsComponent implements OnInit {
     { name: 'zastraszanie',           taken: '', isTen: '', isTwelve: '', relatedTalents: '' },
   ];
   advancedSkills = [];
+
   constructor( private characterService: CharacterService, private careerService: CareerService) { }
 
   ngOnInit() {
@@ -46,6 +48,7 @@ export class SkillsComponent implements OnInit {
       this.addSkill(skills);
     });
   }
+
   addSkill(skills: string[]): void {
     skills.forEach( skill => {
       if (skill.search(' lub ') === -1) {
@@ -98,4 +101,5 @@ export class SkillsComponent implements OnInit {
       }
     });
   }
+
 }

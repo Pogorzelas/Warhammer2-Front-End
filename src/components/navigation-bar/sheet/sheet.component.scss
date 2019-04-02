@@ -1,11 +1,9 @@
-#sheet{
-
+#sheet {
   color: black;
   font-size: 16px;
-  font-family: "Century Schoolbook L",sans-serif;
+  font-family: "Century Schoolbook L", sans-serif;
 
-  #firstCard{
-
+  #firstCard {
     background-image: url("../../../assets/Karta_top.png");
     width: 980px;
     height: 1338px;
@@ -13,26 +11,20 @@
     grid-template-columns: 473px 475px;
     grid-column-gap: 31px;
 
-    #firstHalf{
-
+    #firstHalf {
       display: grid;
       grid-template-rows: 155px 230px 292px 263px 340px;
       grid-row-gap: 13px;
-
     }
 
-    #secondHalf{
-
+    #secondHalf {
       display: grid;
       grid-template-rows: 235px 70px 66px 632px 262px;
       grid-row-gap: 13px;
-
     }
-
   }
 
-  #secondCard{
-
+  #secondCard {
     background-image: url("../../../assets/Karta_bot.png");
     width: 981px;
     height: 1361px;
@@ -40,21 +32,15 @@
     grid-template-columns: 473px 475px;
     grid-column-gap: 31px;
 
-    #firstSide{
-
+    #firstSide {
       height: 1354px;
-
     }
 
-    #secondSide{
-
+    #secondSide {
       display: grid;
       grid-template-rows: 605px 575px 135px;
       grid-row-gap: 13px;
-
     }
-
   }
-
 }
 

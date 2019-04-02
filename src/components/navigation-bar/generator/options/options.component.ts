@@ -8,9 +8,12 @@ import { CareerService } from '../../../../services/career.service';
   styleUrls: ['./options.component.scss']
 })
 export class OptionsComponent implements OnInit {
+
   style = <string> 'main';
   phase = <number> 1;
-  constructor(private characterService: CharacterService, private careerService: CareerService) { }
+
+  constructor(private characterService: CharacterService, private careerService: CareerService) {}
+
   ngOnInit() {
     this.characterService.getConfirmationP1().subscribe( confirmation => {
       if ( confirmation ) {
@@ -34,6 +37,7 @@ export class OptionsComponent implements OnInit {
       }
     });
   }
+
 }
 
 

@@ -9,7 +9,9 @@ import {CharacterService} from '../../../../services/character.service';
   styleUrls: ['./weapons.component.scss']
 })
 export class WeaponsComponent implements OnInit {
+
   weapons: Weapon[] = [];
+
   constructor(private characterService: CharacterService, private careerService: CareerService) {}
 
   ngOnInit() {
@@ -29,4 +31,5 @@ export class WeaponsComponent implements OnInit {
       this.weapons.push(weapon);
     });
   }
+
 }

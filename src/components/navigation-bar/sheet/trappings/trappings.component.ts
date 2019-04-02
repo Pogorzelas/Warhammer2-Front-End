@@ -8,7 +8,9 @@ import {CharacterService} from '../../../../services/character.service';
   styleUrls: ['./trappings.component.scss']
 })
 export class TrappingsComponent implements OnInit {
+
   trappings: Trapping[] = [];
+
   constructor(private characterService: CharacterService, private careerService: CareerService) {}
 
   ngOnInit() {
@@ -24,6 +26,7 @@ export class TrappingsComponent implements OnInit {
       this.addTrapping(trapping);
     });
   }
+
   addTrapping(trapping: any): void {
     if (trapping.search(' lub ') === -1) {
       if (trapping.search('k10') !== -1) {
@@ -41,4 +44,5 @@ export class TrappingsComponent implements OnInit {
       }
     }
   }
+
 }
