@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { LogComponent } from '../components/log/log.component';
 import { NavigationBarComponent } from '../components/navigation-bar/navigation-bar.component';
 import { SheetComponent } from '../components/navigation-bar/sheet/sheet.component';
 import { GeneratorComponent } from '../components/navigation-bar/generator/generator.component';
@@ -29,7 +28,6 @@ import { SetNameComponent } from '../components/navigation-bar/generator/options
 import { CareerComponent } from '../components/navigation-bar/generator/options/career/career.component';
 import { CharacterListComponent } from '../components/navigation-bar/character-list/character-list.component';
 import { AppRoutingModule } from './app-routing.module';
-import { RegistrationComponent } from '../components/log/registration/registration.component';
 import { RollCareerComponent } from '../components/navigation-bar/generator/options/career/roll-career/roll-career.component';
 import { ChooseFromAllComponent } from '../components/navigation-bar/generator/options/career/choose-from-all/choose-from-all.component';
 import { ChooseBetweenComponent } from '../components/navigation-bar/generator/choose-between/choose-between.component';
@@ -40,7 +38,6 @@ import { MercyComponent } from '../components/navigation-bar/generator/options/m
 @NgModule({
   declarations: [
     AppComponent,
-    LogComponent,
     NavigationBarComponent,
     SheetComponent,
     GeneratorComponent,
@@ -65,7 +62,6 @@ import { MercyComponent } from '../components/navigation-bar/generator/options/m
     SetNameComponent,
     CareerComponent,
     CharacterListComponent,
-    RegistrationComponent,
     RollCareerComponent,
     ChooseFromAllComponent,
     ChooseBetweenComponent,
