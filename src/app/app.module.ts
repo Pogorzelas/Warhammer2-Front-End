@@ -20,7 +20,7 @@ import { MoneyComponent } from '../components/navigation-bar/sheet/money/money.c
 import { SkillsComponent } from '../components/navigation-bar/sheet/skills/skills.component';
 import { OptionsComponent } from '../components/navigation-bar/generator/options/options.component';
 import { FormsModule } from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { NameComponent } from '../components/navigation-bar/generator/options/name/name.component';
 import { RollNameComponent } from '../components/navigation-bar/generator/options/name/roll-name/roll-name.component';
 import { ChooseNameComponent } from '../components/navigation-bar/generator/options/name/choose-name/choose-name.component';

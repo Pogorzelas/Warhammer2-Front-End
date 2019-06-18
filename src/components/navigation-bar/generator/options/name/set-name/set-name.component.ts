@@ -8,17 +8,21 @@ import {CharacterService} from '../../../../../../services/character.service';
 })
 export class SetNameComponent implements OnInit {
 
-  constructor(private characterService: CharacterService) { }
   name: string;
   hide = <boolean> false;
+
+  constructor(private characterService: CharacterService) {}
+
   ngOnInit() {
   }
+
   sendName() {
-    if ( this.name !== undefined && this.name !== '' ) {
+    if (this.name !== undefined && this.name !== '') {
       this.characterService.setName(this.name);
       this.characterService.confirmName();
     } else {
       this.hide = true;
     }
-    }
+  }
+
 }

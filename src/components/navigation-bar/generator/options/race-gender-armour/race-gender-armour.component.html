@@ -1,7 +1,5 @@
 <form>
-
   <fieldset>
-
     <legend>Opcje liczenia pancerza</legend>
     <div class = "row">
 
@@ -9,7 +7,6 @@
       <label> <input type = "radio" name = "armour" (click) = "pickArmourOptions('advanced')" > Zaawansowane </label>
 
     </div>
-
     <legend>Rasa:</legend>
     <div class = "row">
 
@@ -19,7 +16,6 @@
       <label><input type = "radio" name = "race" (click) = "pickRace('Niziołek')">Niziołek</label>
 
     </div>
-
     <legend>Płeć:</legend>
     <div class = "row">
 
@@ -28,7 +24,5 @@
 
     </div>
     <input type = "button" value = "Zatwierdź" (click) = "confirm()" [disabled] = "!(race != undefined && gender != undefined)" class = "btn btn-secondary">
-
   </fieldset>
-
 </form>

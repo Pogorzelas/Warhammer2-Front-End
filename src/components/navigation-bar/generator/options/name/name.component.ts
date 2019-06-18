@@ -7,7 +7,9 @@ import {CharacterService} from '../../../../../services/character.service';
   styleUrls: ['./name.component.scss']
 })
 export class NameComponent implements OnInit {
+
   option: number;
+
   constructor(private characterService: CharacterService) { }
 
   ngOnInit() {
@@ -19,4 +21,5 @@ export class NameComponent implements OnInit {
       this.characterService.chooseName();
     }
   }
+
 }

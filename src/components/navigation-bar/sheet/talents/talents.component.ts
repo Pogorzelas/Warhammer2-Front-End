@@ -9,8 +9,10 @@ import { Talent } from '../../../../interfaces/talent';
   styleUrls: ['./talents.component.scss']
 })
 export class TalentsComponent implements OnInit {
+
   talents: string[] = [];
   describe: string[] = [];
+
   constructor(private careerService: CareerService, private characterService: CharacterService ) {}
 
   ngOnInit() {
@@ -24,6 +26,7 @@ export class TalentsComponent implements OnInit {
       this.addTalents(talents);
     });
   }
+
   addTalents(talents: any[]): void {
     talents.forEach(talent => {
       if (talent.search(' lub ') === -1) {
@@ -46,4 +49,5 @@ export class TalentsComponent implements OnInit {
       }
     });
   }
+
 }

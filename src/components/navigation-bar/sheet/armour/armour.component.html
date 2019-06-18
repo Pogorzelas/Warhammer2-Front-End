@@ -1,13 +1,17 @@
 <div id="primary">
   <ng-container>
+
     <output>{{armourType}}</output><output>{{armourPoints}}</output>
+
   </ng-container>
 </div>
 <div id="advance">
   <ng-container *ngFor = "let arm of armour">
+
     <output>{{arm.armourType}}</output>
     <output>{{arm.enc}}</output>
     <output>{{arm.locationsCovered}}</output>
     <output>{{arm.AP}}</output>
+
   </ng-container>
 </div>

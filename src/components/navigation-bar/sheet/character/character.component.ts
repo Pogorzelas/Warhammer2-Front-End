@@ -10,11 +10,13 @@ import {CareerService} from '../../../../services/career.service';
 
 })
 export class CharacterComponent implements OnInit {
-  // VARIABLES
+
   name: string;
   race: string;
   career: string;
-  constructor(private characterService: CharacterService, private careerService: CareerService) { }
+
+  constructor(private characterService: CharacterService, private careerService: CareerService) {}
+
   ngOnInit() {
     this.characterService.getRace().subscribe( race => {
       this.race = race;
@@ -26,4 +28,5 @@ export class CharacterComponent implements OnInit {
       this.career = career;
     });
   }
+
 }

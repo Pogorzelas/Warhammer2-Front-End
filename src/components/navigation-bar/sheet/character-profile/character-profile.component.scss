@@ -1,5 +1,4 @@
-#container{
-
+#container {
   margin-top: 65px;
   margin-left: 85px;
   display: grid;
@@ -9,30 +8,23 @@
   font-family: monospace;
 
   #mercy {
-
     background: greenyellow;
     border: 0.5px solid #555;
-
   }
 
   #mercy:hover {
-
     cursor: pointer;
     background-color: lightcoral;
-
   }
 
-  div{
-
+  div {
     display: grid;
     grid-template: repeat(3, 32.1px)/repeat(8, 48.2px);
 
-    output{
-
+    output {
       display: flex;
       align-items: center;
       justify-content: center;
-
     }
   }
 }

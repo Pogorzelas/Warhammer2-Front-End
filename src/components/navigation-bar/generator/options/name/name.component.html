@@ -1,12 +1,10 @@
 <form>
-
   <fieldset>
-  <legend>Name:</legend>
+    <legend>Name:</legend>
     <div  class = "row"></div>
     <label><input type = "radio" name = "name" value = "roll" (focus) = "chooseOption(1)">Losuj</label>
     <label><input type = "radio" name = "name" value = "choose" (focus) = "chooseOption(2)">Wybierz</label>
     <label><input type = "radio" name = "name" value = "nameIt" (focus) = "chooseOption(3)">Nazwij</label>
-
   </fieldset>
 </form>
 <ng-container *ngIf = "option === 1">

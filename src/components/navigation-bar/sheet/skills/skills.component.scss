@@ -1,12 +1,10 @@
 #page {
-
   font-size: 10px;
   display: grid;
   grid-gap: 60px;
   line-height: 1;
 
   #baseSkills {
-
     margin-left: 184px;
     margin-top: 85px;
     display: grid;
@@ -14,22 +12,17 @@
     grid-template: repeat(20, 8px) / repeat(3, 8px) 60px;
 
     output {
-
       display: flex;
       align-items: center;
       justify-content: center;
-
     }
 
     #marginTwelve {
-
       margin-left: 6px;
-
     }
   }
 
   #advancedSkills {
-
     margin-left: 15px;
     margin-top: 28px;
     display: grid;
@@ -37,28 +30,20 @@
     grid-template: repeat(15, 20px) / 105px repeat(3, 8px) 120px;
 
     output {
-
       display: flex;
       align-items: center;
-
     }
 
     .margin {
-
       margin-left: 25px;
-
     }
 
     .margin1 {
-
       margin-left: 38px;
-
     }
 
     .margin2 {
-
-       margin-left: 36px;
-
-     }
+      margin-left: 36px;
+    }
   }
 }

@@ -9,6 +9,7 @@ import {StaticMethods} from '../../../../constants/static-methods';
   styleUrls: ['./personal-details.component.scss']
 })
 export class PersonalDetailsComponent implements OnInit {
+
   age: string;
   gender: string;
   eyeColour: string;
@@ -21,8 +22,7 @@ export class PersonalDetailsComponent implements OnInit {
   distinguishingMarks: string;
   race: string;
 
-  constructor(private characterService: CharacterService) {
-  }
+  constructor(private characterService: CharacterService) {}
 
   ngOnInit() {
     this.characterService.getRace().subscribe(race => {
@@ -76,4 +76,5 @@ export class PersonalDetailsComponent implements OnInit {
       }
     });
   }
+
 }

@@ -7,8 +7,10 @@ import {CareerService} from '../../../../../services/career.service';
   styleUrls: ['./career.component.scss']
 })
 export class CareerComponent implements OnInit {
+
   option: number;
-  constructor(private careerService: CareerService) { }
+
+  constructor(private careerService: CareerService) {}
 
   ngOnInit() {
     this.careerService.getAllCareers();
@@ -16,7 +18,8 @@ export class CareerComponent implements OnInit {
 
   chooseOption(option: number): void {
     this.option = option;
-    }
   }
+
+}
 
 

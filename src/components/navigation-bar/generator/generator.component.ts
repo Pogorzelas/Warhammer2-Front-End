@@ -7,12 +7,15 @@ import {CareerService} from '../../../services/career.service';
   styleUrls: ['./generator.component.scss']
 })
 export class GeneratorComponent implements OnInit {
+
   phase = 'start';
-  constructor(private careerService: CareerService) { }
+
+  constructor(private careerService: CareerService) {}
 
   ngOnInit() {
     this.careerService.getFinish().subscribe( finish => {
       this.phase = finish;
     });
   }
+
 }

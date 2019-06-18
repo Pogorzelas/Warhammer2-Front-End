@@ -8,8 +8,10 @@ import {Armour} from '../../../../interfaces/armour';
   styleUrls: ['./armour-points.component.scss']
 })
 export class ArmourPointsComponent implements OnInit {
+
   armourPoints = new Array<number>(6);
-  constructor(private careerService: CareerService) { }
+
+  constructor(private careerService: CareerService) {}
 
   ngOnInit() {
     this.careerService.getArmourPoints().subscribe( points => {

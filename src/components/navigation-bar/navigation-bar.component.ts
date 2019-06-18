@@ -5,8 +5,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navigation-bar.component.scss']
 })
 export class NavigationBarComponent implements OnInit {
+
   option = <number> 1;
-  constructor() { }
+
+  constructor() {}
 
   ngOnInit() {
   }
@@ -14,4 +16,5 @@ export class NavigationBarComponent implements OnInit {
   chooseOption(option: number): void {
     this.option = option;
   }
+
 }

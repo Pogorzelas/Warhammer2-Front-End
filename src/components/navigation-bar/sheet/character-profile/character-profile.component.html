@@ -1,7 +1,5 @@
 <div id="container">
-
   <div>
-
     <ng-container *ngFor = "let main of mainProfile ; let i = index">
 
       <output (click) = "change(i)" [id] = "mercy[i]">{{main}}</output>
@@ -18,10 +16,8 @@
       <output *ngIf = "advanceMainProfile[i] !== undefined">{{main + advanceMainProfile[i]}}</output>
 
     </ng-container>
-
   </div>
   <div>
-
     <ng-container *ngFor = "let secondary of secondaryProfile">
 
       <output>{{secondary}}</output>
@@ -38,7 +34,5 @@
       <output *ngIf = "advanceSecondaryProfile[i] !== undefined">{{secondary + advanceSecondaryProfile[i]}}</output>
 
     </ng-container>
-
   </div>
-
 </div>
