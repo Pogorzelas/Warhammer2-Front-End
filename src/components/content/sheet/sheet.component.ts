@@ -5,11 +5,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './sheet.component.html',
   styleUrls: ['./sheet.component.scss']
 })
+
 export class SheetComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 }
